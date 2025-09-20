@@ -15,6 +15,8 @@
 
 Visit the live site at: [https://nunyalabs.github.io/nunyalabs-site/](https://nunyalabs.github.io/nunyalabs-site/)
 
+**Last Updated**: September 20, 2025
+
 ## ⚡ Repository Information
 
 This repository contains the **production-ready, minified version** of the NunyaLabs website. All HTML, CSS, and JavaScript files have been optimized for performance and security.
