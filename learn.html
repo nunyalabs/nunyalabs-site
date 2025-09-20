@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Training Programs - NunyaLabs</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --royal-orange: #FF8C00;
+      --royal-orange-light: #FFB347;
+      --royal-orange-dark: #CC7000;
+    }
+    
+    body { 
+      font-family: Arial, sans-serif; 
+      scroll-behavior: smooth; 
+      padding-top: 76px; /* Account for fixed navbar height */
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--royal-orange) 0%, var(--royal-orange-dark) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    
+    .hero .overlay {
+      background: rgba(0,0,0,0.3);
+      display: inline-block;
+      padding: 3rem;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .learn-icons i {
+      font-size: 2.5rem;
+      color: var(--royal-orange);
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .learn-icons i:hover {
+      transform: scale(1.1);
+    }
+    
+    .payment-box {
+      background: linear-gradient(135deg, #fff5e6, #ffe6cc);
+      border: 2px solid var(--royal-orange);
+      padding: 1.5rem;
+      border-radius: 15px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2);
+    }
+    
+    /* Navigation Bar Styles */
+    .navbar {
+      background: rgba(248, 249, 250, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      font-weight: bold;
+      color: var(--royal-orange) !important;
+    }
+    
+    .navbar-nav .nav-link {
+      color: #333 !important;
+      font-weight: 500;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: var(--royal-orange) !important;
+    }
+    
+    /* Custom Royal Orange Classes */
+    .text-royal-orange { color: var(--royal-orange) !important; }
+    .bg-royal-orange { background-color: var(--royal-orange) !important; }
+    
+    .btn-royal-orange {
+      background-color: var(--royal-orange);
+      border-color: var(--royal-orange);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-royal-orange:hover {
+      background-color: var(--royal-orange-dark);
+      border-color: var(--royal-orange-dark);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .border-royal-orange { border: 2px solid var(--royal-orange) !important; }
+    
+    .btn-outline-royal-orange {
+      border: 2px solid var(--royal-orange);
+      color: var(--royal-orange);
+      background: transparent;
+    }
+    
+    .btn-outline-royal-orange:hover {
+      background-color: var(--royal-orange);
+      border-color: var(--royal-orange);
+      color: white;
+    }
+    
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 15px #999;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      color: #fff;
+    }
+    
+    .whatsapp-float i {
+      margin-top: 16px;
+    }
+    
+    /* Card Hover Effects */
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-code-slash me-2"></i> NunyaLabs
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="learn.html">Training Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero d-flex justify-content-center align-items-center">
+    <div class="overlay">
+      <h1 class="display-4 fw-bold mb-4">🎓 Professional Certificate Programs</h1>
+      <p class="lead mb-4">Transform Your Career with Industry-Leading Training</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#learn" class="btn btn-light btn-lg fw-bold">
+          <i class="bi bi-book me-2"></i>View Programs
+        </a>
+        <a href="#register" class="btn btn-outline-light btn-lg fw-bold">
+          <i class="bi bi-person-plus me-2"></i>Enroll Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Training -->
+  <section id="about" class="container py-5">
+    <h2 class="text-center mb-5 text-royal-orange">About Our Training Programs</h2>
+    
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" 
+             alt="NunyaLabs Training" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h3 class="text-royal-orange mb-3">Industry-Focused Learning</h3>
+        <p class="lead">
+          Our certificate programs are designed with <b>real-world applications</b> in mind, 
+          combining theoretical knowledge with hands-on practical experience.
+        </p>
+        <p>
+          Whether you're starting your tech career or upgrading your skills, our programs 
+          provide the foundation and advanced techniques needed to excel in today's 
+          <b>digital economy</b>.
+        </p>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-check-circle text-royal-orange me-2"></i>Expert-led instruction</li>
+          <li><i class="bi bi-check-circle text-royal-orange me-2"></i>Practical project-based learning</li>
+          <li><i class="bi bi-check-circle text-royal-orange me-2"></i>Industry-recognized certifications</li>
+          <li><i class="bi bi-check-circle text-royal-orange me-2"></i>Job placement support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Certificate Programs -->
+  <section id="learn" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 text-royal-orange">Professional Certificate Programs</h2>
+      <p class="lead text-center mb-5">
+        Comprehensive training programs designed to equip you with industry-relevant skills
+      </p>
+
+      <!-- Featured Program - Web Development -->
+      <div class="row mb-5">
+        <div class="col-lg-12">
+          <div class="card shadow-lg border-0">
+            <div class="card-header bg-royal-orange text-white">
+              <h3 class="mb-0"><i class="bi bi-code-slash me-2"></i>10-Week Web Development Crash Course</h3>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h5>What You'll Master:</h5>
+                  <div class="row text-center learn-icons mt-3">
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                      <i class="bi bi-code-slash"></i>
+                      <p class="small">HTML & CSS</p>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                      <i class="bi bi-braces"></i>
+                      <p class="small">JavaScript</p>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                      <i class="bi bi-layers"></i>
+                      <p class="small">Bootstrap & Tailwind</p>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                      <i class="bi bi-window"></i>
+                      <p class="small">Progressive Web Apps</p>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                      <i class="bi bi-robot"></i>
+                      <p class="small">AI Tools</p>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                      <i class="bi bi-cloud-arrow-up"></i>
+                      <p class="small">Deployment</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="text-center">
+                    <h4 class="text-royal-orange">GH₵1,000</h4>
+                    <p>10 Weeks • Online</p>
+                    <a href="#register" class="btn btn-royal-orange btn-lg">Enroll Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Certificate Programs -->
+      <h3 class="text-center mb-4 text-royal-orange">Advanced Certificate Programs</h3>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" 
+                 class="card-img-top" alt="Data Analytics" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title text-royal-orange">
+                <i class="bi bi-graph-up me-2"></i>Data Analytics Certificate
+              </h5>
+              <p class="card-text">Master statistical analysis, data visualization, and business intelligence tools.</p>
+              <ul class="list-unstyled small">
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Excel & Power BI Advanced</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Python for Data Analytics</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Tableau & Data Visualization</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Statistical Modeling & Analysis</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-royal-orange">12 Weeks</span>
+                <small class="text-muted">Takoradi Campus</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0" 
+                 class="card-img-top" alt="Data Engineering" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title text-royal-orange">
+                <i class="bi bi-gear me-2"></i>Data Engineering Certificate
+              </h5>
+              <p class="card-text">Build robust data pipelines and infrastructure for big data processing.</p>
+              <ul class="list-unstyled small">
+                <li><i class="bi bi-check text-royal-orange me-2"></i>SQL & Advanced Database Design</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>ETL Processes & Data Pipelines</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Cloud Data Platforms (AWS, Azure)</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Apache Spark & Hadoop Ecosystem</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-royal-orange">16 Weeks</span>
+                <small class="text-muted">Hybrid Learning</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" 
+                 class="card-img-top" alt="Data Science" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title text-royal-orange">
+                <i class="bi bi-cpu me-2"></i>Data Science Certificate
+              </h5>
+              <p class="card-text">Advanced machine learning, AI, and predictive analytics for data-driven decisions.</p>
+              <ul class="list-unstyled small">
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Machine Learning Algorithms</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Deep Learning & Neural Networks</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Python & R Programming</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Predictive Modeling & AI</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-royal-orange">20 Weeks</span>
+                <small class="text-muted">Onsite Training</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d" 
+                 class="card-img-top" alt="Database Development" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title text-royal-orange">
+                <i class="bi bi-database me-2"></i>Database Development Certificate
+              </h5>
+              <p class="card-text">Design, implement, and optimize database systems for modern applications.</p>
+              <ul class="list-unstyled small">
+                <li><i class="bi bi-check text-royal-orange me-2"></i>SQL Server & PostgreSQL</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>NoSQL Databases (MongoDB, Redis)</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Database Architecture & Design</li>
+                <li><i class="bi bi-check text-royal-orange me-2"></i>Performance Optimization</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-royal-orange">14 Weeks</span>
+                <small class="text-muted">Hybrid Learning</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning Resources -->
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          <div class="card bg-gradient border-0 shadow">
+            <div class="card-body text-center">
+              <h4 class="text-royal-orange mb-3">
+                <i class="bi bi-book me-2"></i>Digital Learning Ecosystem
+              </h4>
+              <p class="mb-4">Access our comprehensive digital library and self-paced learning materials</p>
+              <div class="row">
+                <div class="col-md-3 mb-3">
+                  <i class="bi bi-journal-code text-royal-orange display-6"></i>
+                  <h6 class="mt-2">Interactive Tutorials</h6>
+                  <p class="small text-muted">Step-by-step guided learning</p>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <i class="bi bi-play-circle text-royal-orange display-6"></i>
+                  <h6 class="mt-2">Video Libraries</h6>
+                  <p class="small text-muted">HD video lessons & demos</p>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <i class="bi bi-people text-royal-orange display-6"></i>
+                  <h6 class="mt-2">Community Forums</h6>
+                  <p class="small text-muted">Peer support & mentorship</p>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <i class="bi bi-cloud-check text-royal-orange display-6"></i>
+                  <h6 class="mt-2">Cloud Resources</h6>
+                  <p class="small text-muted">24/7 accessible materials</p>
+                </div>
+              </div>
+              <div class="alert alert-warning mt-3">
+                <i class="bi bi-info-circle me-2"></i>
+                <strong>Campus Update:</strong> Onsite programs conducted at our Takoradi Campus. 
+                Digital resources available globally for self-paced learning.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Projects -->
+  <section id="projects" class="container py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 text-royal-orange">Student Project Showcase</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71" 
+                 class="card-img-top" alt="Task Management App" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title text-royal-orange">Task Management Web App</h5>
+              <p class="card-text">Full-stack application with user authentication, real-time updates, and responsive design.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge bg-secondary">React</span>
+                <span class="badge bg-secondary">Node.js</span>
+                <span class="badge bg-secondary">MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" 
+                 class="card-img-top" alt="E-commerce Platform" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title text-royal-orange">E-commerce Platform</h5>
+              <p class="card-text">Modern shopping interface with payment integration, inventory management, and analytics dashboard.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge bg-secondary">Vue.js</span>
+                <span class="badge bg-secondary">Express</span>
+                <span class="badge bg-secondary">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                 class="card-img-top" alt="Data Analytics Dashboard" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title text-royal-orange">Healthcare Analytics Dashboard</h5>
+              <p class="card-text">Interactive data visualization platform for health metrics analysis and reporting.</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge bg-secondary">Python</span>
+                <span class="badge bg-secondary">Django</span>
+                <span class="badge bg-secondary">D3.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="register" class="container py-5">
+    <h2 class="text-center mb-4 text-royal-orange">Start Your Journey Today</h2>
+
+    <!-- Payment -->
+    <div class="payment-box">
+      <h5><i class="bi bi-cash-stack text-royal-orange me-2"></i>Payment Instructions</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-2">
+            <strong>Registration Fee:</strong> <span class="text-royal-orange fs-5">GH₵1,000</span><br>
+            <strong>Mobile Money:</strong> <span class="text-royal-orange">0269609634</span><br>
+            <strong>Reference:</strong> Use your <u>full name</u> as payment reference
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="alert alert-info mb-0">
+            <i class="bi bi-camera me-2"></i>
+            <strong>Important:</strong> Upload a screenshot of your payment confirmation below
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="regForm" class="shadow-lg p-4 rounded bg-white border-royal-orange">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Full Name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Email Address <span class="text-danger">*</span></label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">WhatsApp Number <span class="text-danger">*</span></label>
+          <input type="tel" class="form-control" id="phone" placeholder="+233..." required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Program Interest <span class="text-danger">*</span></label>
+          <select class="form-select" id="program" required>
+            <option value="">-- Select Program --</option>
+            <option value="Web Development">Web Development (10 weeks)</option>
+            <option value="Data Analytics">Data Analytics Certificate</option>
+            <option value="Data Engineering">Data Engineering Certificate</option>
+            <option value="Data Science">Data Science Certificate</option>
+            <option value="Database Development">Database Development Certificate</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Payment Method <span class="text-danger">*</span></label>
+          <select class="form-select" id="method" required>
+            <option value="">-- Select --</option>
+            <option value="Mobile Money">Mobile Money</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Payment Screenshot <span class="text-danger">*</span></label>
+          <input type="file" class="form-control" id="paymentScreenshot" accept="image/*" required>
+          <div class="form-text">Upload screenshot of payment confirmation (PNG, JPG, JPEG)</div>
+        </div>
+      </div>
+      
+      <div id="imagePreview" class="mb-3"></div>
+      
+      <button type="submit" class="btn btn-royal-orange btn-lg w-100 fw-bold">
+        <i class="bi bi-send me-2"></i>Submit Registration
+      </button>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 text-royal-orange">Get In Touch</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row text-center">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <i class="bi bi-whatsapp text-success display-4 mb-3"></i>
+                  <h5>WhatsApp Support</h5>
+                  <p class="card-text">Get instant support and program information</p>
+                  <a href="https://wa.me/233269609634" class="btn btn-success" target="_blank">
+                    <i class="bi bi-whatsapp"></i> Chat Now
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <i class="bi bi-geo-alt text-royal-orange display-4 mb-3"></i>
+                  <h5>Campus Location</h5>
+                  <p class="card-text">Takoradi Campus<br><small class="text-muted">Onsite & Hybrid Programs</small></p>
+                  <button class="btn btn-outline-royal-orange" disabled>
+                    <i class="bi bi-building"></i> Coming Soon
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <i class="bi bi-envelope text-royal-orange display-4 mb-3"></i>
+                  <h5>Email Support</h5>
+                  <p class="card-text">Send us detailed inquiries via email</p>
+                  <a href="mailto:info@nunyalabs.com" class="btn btn-royal-orange">
+                    <i class="bi bi-envelope"></i> Send Email
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <p class="lead">Have questions about our programs?</p>
+            <a href="https://wa.me/233269609634?text=Hi, I have questions about NunyaLabs Certificate Programs" 
+               class="btn btn-royal-orange btn-lg" target="_blank">
+              <i class="bi bi-chat-dots"></i> Ask Questions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-md-start">
+          <p class="mb-1">
+            <i class="bi bi-code-slash text-royal-orange me-2"></i>
+            <strong>NunyaLabs</strong> - Empowering Digital Futures
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-1">
+            📞 WhatsApp: 
+            <a href="https://wa.me/233269609634" class="text-royal-orange fw-bold" target="_blank">
+              +233 26 960 9634
+            </a>
+          </p>
+        </div>
+      </div>
+      <hr class="my-3">
+      <p class="small text-muted mb-0">
+        © 2025 NunyaLabs. All rights reserved. | Health Informatics & Digital Education
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/233269609634" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Thank You Modal -->
+  <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-royal-orange">
+        <div class="modal-body text-center p-5">
+          <i class="bi bi-check-circle-fill text-success display-1 mb-3"></i>
+          <h3 class="text-success mb-3">Registration Submitted!</h3>
+          <p id="userName" class="lead"></p>
+          <p>Your registration details have been sent via WhatsApp. We'll contact you soon with next steps!</p>
+          <button class="btn btn-royal-orange btn-lg" data-bs-dismiss="modal">
+            <i class="bi bi-house-door me-2"></i>Continue Exploring
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Handle file preview
+    document.getElementById("paymentScreenshot").addEventListener("change", function(e) {
+      const file = e.target.files[0];
+      const preview = document.getElementById("imagePreview");
+      
+      if (file) {
+        // Validate file size (max 5MB)
+        if (file.size > 5 * 1024 * 1024) {
+          alert("File size should be less than 5MB");
+          e.target.value = "";
+          return;
+        }
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          preview.innerHTML = `
+            <div class="border border-royal-orange rounded p-3 bg-light">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <img src="${e.target.result}" alt="Payment Screenshot" 
+                       class="img-thumbnail" style="max-width: 150px; max-height: 150px;">
+                </div>
+                <div class="col-md-9">
+                  <p class="text-success mb-2">
+                    <i class="bi bi-check-circle-fill me-2"></i>Payment screenshot uploaded successfully!
+                  </p>
+                  <p class="small text-muted mb-0">
+                    <strong>File:</strong> ${file.name}<br>
+                    <strong>Size:</strong> ${(file.size / 1024).toFixed(1)} KB
+                  </p>
+                </div>
+              </div>
+            </div>
+          `;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        preview.innerHTML = "";
+      }
+    });
+
+    // Handle form submission
+    document.getElementById("regForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const program = document.getElementById("program").value;
+      const method = document.getElementById("method").value;
+      const screenshot = document.getElementById("paymentScreenshot").files[0];
+
+      // Validate screenshot upload
+      if (!screenshot) {
+        alert("Please upload your payment screenshot before submitting.");
+        return;
+      }
+
+      // Create WhatsApp message
+      const msg = `🎓 NEW PROGRAM REGISTRATION - NunyaLabs%0A%0A👤 Name: ${name}%0A📧 Email: ${email}%0A📱 WhatsApp: ${phone}%0A📚 Program: ${program}%0A💳 Payment: ${method}%0A%0A✅ Payment screenshot has been uploaded%0A%0APlease review and confirm enrollment.`;
+      
+      const whatsappURL = `https://wa.me/233269609634?text=${msg}`;
+
+      // Open WhatsApp
+      window.open(whatsappURL, "_blank");
+
+      // Show Thank You modal
+      document.getElementById("userName").innerText = `Welcome to NunyaLabs, ${name}!`;
+      const modal = new bootstrap.Modal(document.getElementById("thankYouModal"));
+      modal.show();
+
+      // Reset form
+      document.getElementById("regForm").reset();
+      document.getElementById("imagePreview").innerHTML = "";
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
