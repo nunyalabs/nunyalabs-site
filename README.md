@@ -9,19 +9,17 @@
 - **Royal Orange Branding**: Consistent design theme across all pages
 - **Responsive Design**: Bootstrap 5.3.3 for mobile-first responsive layout
 - **Payment Integration**: WhatsApp-based enrollment and payment system
-- **Automated Deployment**: GitHub Actions workflow with minification
+- **Optimized Performance**: Minified and compressed files for fast loading
 
 ## 🚀 Live Site
 
 Visit the live site at: [https://nunyalabs.github.io/nunyalabs-site/](https://nunyalabs.github.io/nunyalabs-site/)
 
-## 🛠️ Development
+## ⚡ Repository Information
 
-### Prerequisites
-- Node.js (v18 or higher)
-- Git
+This repository contains the **production-ready, minified version** of the NunyaLabs website. All HTML, CSS, and JavaScript files have been optimized for performance and security.
 
-### Local Development
+### Viewing the Site Locally
 
 1. **Clone the repository**:
    ```bash
@@ -29,22 +27,13 @@ Visit the live site at: [https://nunyalabs.github.io/nunyalabs-site/](https://nu
    cd nunyalabs-site
    ```
 
-2. **Install dependencies**:
+2. **Open directly in browser**:
+   Simply open `index.html` in your web browser, or use a simple HTTP server:
    ```bash
-   npm install
+   python3 -m http.server 8000
+   # or
+   npx live-server
    ```
-
-3. **Start development server**:
-   ```bash
-   npm run dev
-   ```
-   This will start a local server at `http://localhost:3000`
-
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
-   This creates a minified version in the `dist/` directory.
 
 ### File Structure
 

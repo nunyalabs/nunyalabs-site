@@ -20,23 +20,9 @@ Thumbs.db
 *_backup.*
 *_old.*
 
-# Node.js (if using npm in future)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 # Logs
 *.log
 
 # Temporary files
 *.tmp
 *.temp
-
-# Build output
-dist/
-build/
-
-# Package lock files (keep package.json, ignore lock files for flexibility)
-package-lock.json
-yarn.lock
